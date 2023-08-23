@@ -1,9 +1,4 @@
-a = ["Dave", "Mark", "Angela", "Kirasima"]
-b = ["Mark", "Sanchez", "Eric", "Lex"]
-
-c = a + b
-print(c)
-
-c.append("Naran")#добавление элемента
-c.insert(0, "the Conqurer")#вставка элемента на определенную позицию
-print(c)
+a = int(input())
+if (a == 4):
+    raise(SystemExit(1))
+print("it's not foor lads chher up")
