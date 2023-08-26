@@ -1,6 +1,21 @@
-items = [32, 34]
-print(dir(items))#выводит все методы объекта
+class Stack(object):
+    def __init__(self):
+        self.stack = []
+    def push(self, object):
+        self.stack.append(object)
+    def pop(self):
+        return self.stack.pop()
+    def length(self):
+        return len(self.stack)
 
 
-items1 = items.__add__([11,23])
-print(items1)
+s = Stack()
+s.push("Dave")
+s.push([23,13])
+s.push([42, 45])
+p = s.pop()
+z = s.pop()
+print(p)
+print(z)
+print(s.stack)
+print(s.length)
