@@ -1,9 +1,6 @@
+items = [32, 34]
+print(dir(items))#выводит все методы объекта
 
-def cycle(a, b):
-        print(min(b))
-        print(max(a))
 
-a = [1,2,3,4,5,2]
-b = [213,213,12,1,212,12,1]
-
-cycle(a,b)
+items1 = items.__add__([11,23])
+print(items1)
