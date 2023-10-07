@@ -1,17 +1,16 @@
-def solution(text, ending):
-    t = False
-    last_occurence = text.rfind(ending)
-    if (len(ending) > len(text)):
-        return False
+class Date:
+    def __init__(self, month, day, year):
+        self.month = month
+        self.day = day
+        self.year = year
 
-    d = last_occurence+len(ending)
-    z = len(text)
+    def display(self):
+        return "{0}-{1}-{2}".format(self.month, self.day, self.year)
 
-    print(d)
-    print(z)
-    if (d == z):
-        t = True
-   
-    return t
+    @staticmethod
+    def millenium(month, day):
+        return Date(month, day, 2000)
 
-solution("abc", "abcd")
+new_year = Date(1, 1, 2013)
+millenium_new_year = Date.millenium(1, 1)
+millenium_new_year.display()
