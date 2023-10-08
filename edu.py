@@ -1,10 +1,8 @@
-voted = {}
-def check_voter(name):
-    if (voted.get(name)):
-        print("name is identify")
+cache = {}
+def get_page(url):
+    if cache.get(url):
+        return cache[url]
     else:
-        voted[name] = True
-        print("name is not idenrify")
-
-check_voter("aLEX")
-print(voted)
+        data = get_data_from_server(url)
+        cache[url] = data
+        return data
