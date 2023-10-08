@@ -1,7 +1,10 @@
-book = dict()
+voted = {}
+def check_voter(name):
+    if (voted.get(name)):
+        print("name is identify")
+    else:
+        voted[name] = True
+        print("name is not idenrify")
 
-book["apple"] = 0.67
-book["milk"] = 1.49
-book["avokado"] = 1.49
-print(book)
-print(book["avokado"])
+check_voter("aLEX")
+print(voted)
