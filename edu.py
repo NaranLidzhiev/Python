@@ -1,25 +1,6 @@
-n = int(input("n = "))
-m = int(input("m = "))
-    
-if m > n:
-     raise ValueError("n должен быть больше m")
-    
-a = []
-sum_list = []
-
-for i in range(n):
-    a.append(int(input(f"a[{i}] = ")))
-
-i = 0
-while i < n - m + 1:
-    sum_val = 0
-    for j in range(i, i + m):
-        sum_val += a[j]
-    sum_list.append(sum_val)
-    i += 1
-
-for val in sum_list:
-    print(val)
-
-
-
+def sum(list):
+    if list == []: #если список наш опустел, то мы возвращаем 0
+        return 0
+    return list[0] + sum(list[1:])  #тут мы берем первый элемент нашего листа и рекурсивно вызывает саму себя, но уже со списком начинающимся со следующей позици
+#в конце концов начнется возврат обратно по стеку вызовов с накоплением суммы
+print(sum([1,2,3,4]))
