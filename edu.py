@@ -1,6 +1,8 @@
-def count(list):
-    if list == []:
-        return 0
-    else:
-        return 1 + count(list[1:])#тут мы также делаем только вместо чисел самих мы просто добавляем единицу каждый раз когда вызываем рекурсию
-print(count([1,2,3,4,5]))
+def quick_sort(array):
+    if len(array)<2:
+        return array
+    pivot = array[0]
+    less = [i for i in array[1:] if i <= pivot]
+    greater = [i for i in array[1:] if i > pivot]
+    return quick_sort(less) +[pivot] +quick_sort(greater)
+print(quick_sort([1,1,3,3,2,34,24,43,2,4,234,23,43,4,5,5,43,5,25,2]))
