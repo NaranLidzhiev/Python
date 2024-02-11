@@ -1,11 +1,22 @@
-def separator(arr):
-    string = ""
-    for i in range(len(arr)):
-        if i == len(arr)-1:
-            string += "and "
-        string += arr[i]+" "
-    return string
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
 
 
-spam = ['apples', 'bananas', 'tofu', 'cats']
-print(separator(spam))
+string = []
+length = len(grid[0])
+line = ""
+for i in range(6):
+    for j in range(9):
+        line += grid[j][i]
+    string.append(line)
+    line = ""
+for i in range(len(string)):
+    print(string[i])
