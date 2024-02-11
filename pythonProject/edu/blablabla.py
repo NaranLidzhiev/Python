@@ -1,7 +1,18 @@
-myCat = {'размер': 'толстый', 'цвет': 'серый', 'характер': 'шумный'}
-print("мой ахуеть какой", myCat["размер"], "кот пиздец какой", myCat["характер"])
-myCat1 = {'размер': 'маленький', 'цвет': 'красный', 'характер': 'хуевый'}
-myCat2 = {'цвет': 'серый', 'характер': 'шумный', 'размер': 'толстый'}
-print(myCat == myCat1)
-print(myCat == myCat2)
+def birth_day(bd):
+    while True:
+        name = input("Enter a name ")
+        if name == "":
+            break
 
+        if name in bd:
+            print(name + " Родился/ась", bd[name])
+        else:
+            print("Ты не записал днюху")
+            print("Записывай блять")
+            bd[name] = input()
+            print("Теперь не забудем")
+
+
+birthdays = {'Алиса': 'Апр 1', 'Боб': 'Дек 12', 'Кэрол': 'Мар 4'}
+
+birth_day(birthdays)
