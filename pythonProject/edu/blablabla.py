@@ -6,5 +6,6 @@ def separator(arr):
         string += arr[i]+" "
     return string
 
+
 spam = ['apples', 'bananas', 'tofu', 'cats']
 print(separator(spam))
